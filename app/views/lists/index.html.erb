@@ -1,0 +1,17 @@
+<div class="full-size" >
+  <%= image_tag "cinema.jpg", alt: ""%>
+</div>
+
+<div class="flex">
+  <h3>My Lists</h3>
+  <button type="button" class="btn btn-success" href="<%= new_list_path %>"> Create a movie list</button>
+</div>
+
+
+<div class="cards">
+  <% @lists.each do |list| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <%=  list.name%>
+    </div>
+  <% end %>
+</div>
