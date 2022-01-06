@@ -1,8 +1,11 @@
-<h1>Add A new list</h1>
+<div class="container-add-list">
 
-<%= simple_form_for(@list) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+  <h1>Add A new list</h1>
+
+  <%= simple_form_for(@list) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit %>
+  <% end %>
+</div>

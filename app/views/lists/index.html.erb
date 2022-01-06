@@ -1,18 +1,27 @@
-
-
-<div class="flex">
-  <h3>My Lists</h3>
-  <button type="button" class="btn btn-success" href="<%= new_list_path %>"> Create a movie list</button>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/lewag/image/upload/v1641498353/Screenshot_2022-01-06_at_20.44.00_xejgb8.png);">
+  <div class="container">
+    <h1>Save any kind of movies</h1>
+  </div>
 </div>
 
+<div class="container bottom">
+  <div class="flex-container my-lists">
+    <h3>My Lists</h3>
+    <button type="button" class="btn btn-success">
+      <a href="<%= new_list_path %>"> Create a movie list </a>
+    </button>
+  </div>
 
-<div class="cards">
-  <% @lists.each do |list| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg), width=300, height=300">
-      <%=  list.name%>
-      <%= cl_image_tag list.photo.key %>
-
-
-    </div>
-  <% end %>
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <div>
+        <a href="lists/<%= list.id %>" >
+        <%= cl_image_tag(list.photo.key, :transformation=>[
+          {:width=>300, height: 300, :crop=>"scale", :effect=>"art:zorro"},
+          {:overlay=>{:color=>"White", :font_family=>"Roboto", :font_size=>20, :text=>list.name}}
+          ]) %>
+        </a>
+      </div>
+    <% end %>
+  </div>
 </div>

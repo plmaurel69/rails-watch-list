@@ -4,3 +4,60 @@
 #ntm {
   color: red;
 }
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.flex-container {
+	display: flex;
+  justify-content: space-between;
+}
+
+.container-list {
+  display: block;
+  margin: 0 auto;
+  width: 1000px;
+  height: 1000px;
+}
+
+.my-lists {
+  margin-top : 30px;
+}
+
+.bottom {
+  margin-bottom: 30px;
+}
+
+.cards {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container-add-list {
+  margin: 0 auto;
+  width: 1000px;
+  height: 1000px;
+  h1{
+    text-align: center;
+    margin-top: 20px;
+  }
+}

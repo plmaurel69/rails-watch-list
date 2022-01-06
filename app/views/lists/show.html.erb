@@ -1,4 +1,10 @@
-<h1>My List</h1>
+<div>
+        <%= cl_image_tag(@list.photo.key, :transformation=>[
+          {:width=>1500, height: 500, :crop=>"scale", :effect=>"art:zorro"},
+          {:overlay=>{:color=>"white", :font_family=>"Roboto", :font_size=>60, :text=>@list.name}}
+          ]) %>
+        </a>
+  </div>
 
 <% @list.movies.each do |movie| %>
 <%= movie.title %>
